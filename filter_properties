@@ -1,0 +1,58 @@
+#!/usr/bin/env java --source 17
+
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Properties;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
+
+public class Replace {
+  public static void main(String[] args) throws IOException {
+    if (args.length != 1) {
+      System.err.println("ERROR: missing arguments: replace \"file\"");
+      System.exit(1);
+    }
+    String userHome = System.getProperty("user.home");
+    String localRepo = userHome + "/.m2/repository";
+    String project = Path.of(".").toRealPath().toString();
+
+    Set<String> allowedProperties = Set.of("sonar.moduleKey", "sonar.modules", "sonar.projectBaseDir", "sonar.projectBuildDir",
+    "sonar.projectKey", "sonar.projectName", "sonar.projectVersion", "sonar.scanner.app", "sonar.scanner.appVersion", "sonar.scanner.dumpToFile",
+    "sonar.sourceEncoding", "sonar.sources", "sonar.working.directory");
+
+    Set<String> disallowProperties = Set.of("sonar.login", "sonar.password", "sonar.scanner.dumpToFile");
+
+    Path path = Path.of(args[0]);
+    Properties inProperties = new Properties();
+    Properties outProperties = new Properties();
+    try (InputStream in = Files.newInputStream(path);
+         InputStreamReader streamReader = new InputStreamReader(in, UTF_8);
+         BufferedReader bufferedReader = new BufferedReader(streamReader)) {
+      inProperties.load(bufferedReader);
+      inProperties.stringPropertyNames().stream()
+        .sorted()
+        .filter(name -> (name.startsWith("org.example.") || allowedProperties.contains(name))  && disallowProperties.stream().noneMatch(name::contains))
+        .forEach(name -> outProperties.setProperty(
+          name, 
+          inProperties.getProperty(name, "")
+          .replace(project, "{project}")
+          .replace(localRepo, "{local-repo}")
+          .replace(userHome, "{home}")));
+    }
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    outProperties.store(new OutputStreamWriter(out, UTF_8), null);
+    Files.writeString(path, Arrays.stream(out.toString(UTF_8).split("\n", -1))
+      .filter(line -> !line.startsWith("#"))
+      .sorted()
+      .collect(Collectors.joining("\n")));
+  }
+}

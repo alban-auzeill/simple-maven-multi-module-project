@@ -1,0 +1,5 @@
+*     text eol=lf
+*.jar binary
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.log  binary
