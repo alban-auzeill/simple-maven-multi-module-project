@@ -1,0 +1,4 @@
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.8.0.2131__after-compile.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.8.0.2131__after-test.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.9.1.2184__after-compile.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.9.1.2184__after-test.properties

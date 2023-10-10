@@ -1,0 +1,3 @@
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.10.0.2594__after-install.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.10.0.2594__after-package.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.10.0.2594__after-verify.properties

@@ -3,7 +3,7 @@
 ## Extract scanner properties
 
 ```shell
-export SQ_USER="****"
-export SQ_PASSWORD="****"
+export SONAR_LOGIN="****"
+export SONAR_PASSWORD="****"
 ./extract_scanner_properties.sh
 ```

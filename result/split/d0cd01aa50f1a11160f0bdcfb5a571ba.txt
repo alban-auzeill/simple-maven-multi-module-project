@@ -1,0 +1,9 @@
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.5.0.1254___with-install.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.5.0.1254___with-package.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.5.0.1254___with-verify.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.6.1.1688___with-install.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.6.1.1688___with-package.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.6.1.1688___with-verify.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.7.0.1746___with-install.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.7.0.1746___with-package.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.7.0.1746___with-verify.properties

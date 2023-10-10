@@ -1,0 +1,12 @@
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.5.0.1254___with-clean.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.5.0.1254___with-validate.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.5.0.1254__after-clean.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.5.0.1254__after-validate.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.6.1.1688___with-clean.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.6.1.1688___with-validate.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.6.1.1688__after-clean.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.6.1.1688__after-validate.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.7.0.1746___with-clean.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.7.0.1746___with-validate.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.7.0.1746__after-clean.properties
+result/split/maven-4.0.0-alpha-7__sonar-maven-plugin-3.7.0.1746__after-validate.properties

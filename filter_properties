@@ -29,7 +29,7 @@ public class Replace {
     "sonar.projectKey", "sonar.projectName", "sonar.projectVersion", "sonar.scanner.app", "sonar.scanner.appVersion", "sonar.scanner.dumpToFile",
     "sonar.sourceEncoding", "sonar.sources", "sonar.working.directory");
 
-    Set<String> disallowProperties = Set.of("sonar.login", "sonar.password", "sonar.scanner.dumpToFile");
+    Set<String> disallowProperties = Set.of("sonar.login", "sonar.password", "sonar.scanner.dumpToFile", "sonar.scanner.appVersion");
 
     Path path = Path.of(args[0]);
     Properties inProperties = new Properties();
